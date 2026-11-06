@@ -1,0 +1,43 @@
+  @font-face {
+  font-family: "Mirava";
+  src: url("./fonts/Mirava\ Personal\ Use\ Only.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+  
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+  nav {
+  height: 6.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0F1E3A;
+  font-family: "Mirava", sans-serif;
+}
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 7.1875rem;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 30px;
+    }
+
+    nav a:hover {
+      color: #4da3ff;
+    }
