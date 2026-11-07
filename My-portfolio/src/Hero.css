@@ -1,10 +1,51 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@font-face {
+  font-family: "Gishella Morely";
+  src: url("./fonts/Gishella Morely.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-body {
-  font-family: Arial, sans-serif;
+.hero {
+  display: flex;
+  align-items: flex-start;   /* was center */
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 4rem 4rem 0;      /* top padding sets the gap under the navbar */
+  min-height: 57.625rem;
   background-color: #fff;
+}
+
+.hero-text {
+  align-self: flex-start;
+}
+
+.hero-header {
+  color: #273A5E;
+  font-family: "Gishella Morely", sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  font-synthesis: none;
+}
+
+.hero-header h2 {
+  font: inherit;
+}
+
+.intro p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #111;
+  font-family: "Gothic A1", sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.intro p + p {
+  margin-top: 1.5rem;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 35rem;
+  height: auto;
 }
