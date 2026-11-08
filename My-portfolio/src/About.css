@@ -1,0 +1,112 @@
+.about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 4rem 4rem 0;
+  min-height: 57.625rem;
+  background-color: #273A5E;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 35rem;
+  height: auto;
+  flex-shrink: 1;
+}
+
+.about-text {
+  align-self: flex-start;
+  flex: 1;
+  min-width: 0;
+}
+
+.about-header {
+  color: #fff;
+  font-family: "Gishella Morely", sans-serif;
+  font-size: 7rem;
+  font-weight: 400;
+  font-synthesis: none;
+  margin-top: 2.7rem;
+}
+
+.about-header h1 {
+  font: inherit;
+  margin-left: -0.05em;
+}
+
+.about-intro p {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #fff;
+  font-family: "Gothic A1", sans-serif;
+  letter-spacing: 0.03em;
+  margin-top: 2rem;
+}
+
+.about-intro p + p {
+  margin-top: 1.6rem;
+}
+
+/* laptops and small desktops */
+@media (max-width: 75rem) {
+  .about {
+    gap: 2rem;
+    padding: 3rem 2rem 0;
+  }
+
+  .about-intro p {
+    font-size: 1.25rem;
+  }
+
+  .about-image {
+    max-width: 26rem;
+  }
+}
+
+/* tablet and mobile: stack into one column */
+@media (max-width: 56.25rem) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1.5rem 3rem;
+    min-height: auto;
+  }
+
+  .about-text {
+    align-self: stretch;
+  }
+
+  .about-header {
+    margin-top: 0;
+  }
+
+  .about-intro p {
+    font-size: 1.125rem;
+    margin-top: 1.25rem;
+  }
+
+  .about-intro p + p {
+    margin-top: 1.25rem;
+  }
+
+  .about-image {
+    max-width: 22rem;
+  }
+}
+
+/* small phones */
+@media (max-width: 30rem) {
+  .about {
+    padding: 1.5rem 1rem 2rem;
+  }
+
+  .about-intro p {
+    font-size: 1rem;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+}

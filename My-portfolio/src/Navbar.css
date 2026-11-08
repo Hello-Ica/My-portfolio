@@ -1,22 +1,5 @@
-  @font-face {
-  font-family: "Mirava";
-  src: url("./fonts/Mirava\ Personal\ Use\ Only.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-  
-  * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-  nav {
+nav {
+  position: relative;               /* added: anchors the mobile dropdown */
   height: 6.875rem;
   display: flex;
   align-items: center;
@@ -25,19 +8,84 @@
   font-family: "Mirava", sans-serif;
 }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 7.1875rem;
-      justify-content: center;
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 7.1875rem;
+  justify-content: center;
+}
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 30px;
-    }
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.875rem;              /* 30px in rem */
+}
 
-    nav a:hover {
-      color: #4da3ff;
-    }
+nav a:hover {
+  color: #4da3ff;
+}
+
+/* added: hamburger button is hidden on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 0.5rem;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 1.75rem;
+  height: 0.1875rem;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* added: laptops and small desktops, tighter spacing */
+@media (max-width: 75rem) {
+  nav ul {
+    gap: 3rem;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+}
+
+/* added: tablet and mobile, hamburger menu */
+@media (max-width: 56.25rem) {
+  nav {
+    height: 5rem;
+    justify-content: flex-end;
+    padding: 0 1.5rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    background-color: #0F1E3A;
+    z-index: 10;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+}
