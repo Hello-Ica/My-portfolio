@@ -1,0 +1,207 @@
+.skills {
+  display: flex;
+  align-items: stretch;             /* was flex-start: makes both columns equal height */
+  justify-content: space-between;
+  gap: 6rem;
+  padding: 4rem;
+  background-color: #fff;
+}
+
+.soft-list {
+  flex: 1;                          /* added: list fills the box height */
+  display: flex;                    /* added */
+  flex-direction: column;           /* added */
+  list-style: none;
+}
+
+.soft-skills {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #0F1E3A;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+
+.soft-skills-title {
+  padding: 1rem;
+  text-align: center;
+  background-color: #0F1E3A;
+  color: #fff;
+  font-family: "Gishella Morely", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-synthesis: none;
+}
+
+.soft-list li {
+  flex: 1;                          /* added: rows share the height evenly */
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 1.25rem;               /* was 1.1rem 1.25rem; the row height now comes from flex */
+  font-family: "Gothic A1", sans-serif;
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.soft-list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+/* odd rows: white background, navy dot */
+.soft-list li:nth-child(odd) {
+  background-color: #fff;
+  color: #0F1E3A;
+}
+.soft-list li:nth-child(odd)::before {
+  background-color: #273A5E;
+}
+
+/* even rows: navy background, white dot */
+.soft-list li:nth-child(even) {
+  background-color: #0F1E3A;
+  color: #fff;
+}
+.soft-list li:nth-child(even)::before {
+  background-color: #fff;
+}
+
+.skills-cards {
+  flex: 1.2 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;                      /* was 2.5rem: leaves room for the label between cards */
+  min-width: 0;
+}
+
+.group-title {
+  position: absolute;               /* added: label no longer pushes the card down */
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  font-family: "Mirava Personal Use Only", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.skills-card {
+  padding: 1.25rem;
+  background-color: #1F3A5F;
+  border-radius: 1.5rem;
+}
+
+.skills-group {
+  position: relative;               /* added */
+}
+
+.card-preview {
+  display: block;
+  width: 100%;
+  height: 9rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: solid white 0.12rem;
+}
+
+/* ---------- Icon circles ---------- */
+.icon-row {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.skill-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0.25rem solid #C9D6EA;
+  cursor: pointer;
+  outline: none;
+}
+
+.skill-icon img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+/* Tooltip with the full name */
+.skill-icon::after {
+  content: attr(data-name);
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.35rem 0.7rem;
+  border-radius: 0.4rem;
+  background-color: #fff;
+  color: #0F1E3A;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease;
+  z-index: 10;
+}
+
+.skill-icon:hover::after,
+.skill-icon:focus::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 75rem) {
+  .skills {
+    gap: 2rem;
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 56.25rem) {
+  .skills {
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .soft-skills,
+  .skills-cards {
+    width: 100%;
+    max-width: 34rem;
+    flex: none;
+  }
+}
+
+@media (max-width: 30rem) {
+  .soft-list li {
+    font-size: 1.125rem;
+  }
+
+  .skill-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+}

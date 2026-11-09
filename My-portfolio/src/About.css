@@ -13,6 +13,7 @@
   max-width: 35rem;
   height: auto;
   flex-shrink: 1;
+  align-self: center;     /* added */
 }
 
 .about-text {
@@ -46,6 +47,7 @@
 
 .about-intro p + p {
   margin-top: 1.6rem;
+  margin-bottom: 5rem;  
 }
 
 /* laptops and small desktops */

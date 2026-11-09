@@ -46,13 +46,15 @@
 
 .intro p + p {
   margin-top: 1.6rem;
+  margin-bottom: 5rem;
 }
 
 .hero-image {
   width: 100%;
   max-width: 35rem;
   height: auto;
-  flex-shrink: 1;                 
+  flex-shrink: 1;
+  align-self: center;     /* added */
 }
 
 
