@@ -1,0 +1,244 @@
+.contact {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 3rem 4rem 0 0;            /* no left/bottom padding so the illustration touches the edges */
+  background-color: #fff;
+}
+
+/* ---------- Left column ---------- */
+.contact-title {
+  margin-bottom: 1.5rem;
+  padding-left: 3.5rem;              /* only the title is indented */
+  color: #0F1E3A;
+  font-family: "Gishella Morely", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-synthesis: none;
+}
+
+.contact-image {
+  display: block;
+  width: 100%;
+  max-width: 38rem;
+  height: auto;
+}
+
+/* ---------- Right column ---------- */
+.contact-right {
+  min-width: 0;
+}
+
+.contact-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 3rem;
+  margin-bottom: 4rem;
+}
+
+.contact-direct {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #111;
+  text-decoration: none;
+  font-family: "Mirava", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.03em;
+  overflow-wrap: anywhere;
+}
+
+.contact-direct .underlined {
+  font-size: 1.2rem;                 /* the email is smaller than the phone number */
+}
+
+.direct-icon {
+  flex-shrink: 0;
+  width: 4.25rem;
+  height: 4.25rem;
+}
+
+.underlined {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+/* ---------- Social list ---------- */
+.social-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+.social-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.social-icon-link {
+  flex-shrink: 0;
+  display: block;
+}
+
+.social-icon {
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.social-icon-link:hover .social-icon,
+.social-icon-link:focus-visible .social-icon {
+  transform: scale(1.05);
+}
+
+.social-text {
+  min-width: 0;
+}
+
+.social-name {
+  margin-bottom: 0.25rem;
+  color: #111;
+  font-family: "Mirava", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-synthesis: none;
+  letter-spacing: 0.03em;
+}
+
+.social-link {
+  color: #111;
+  font-family: "Mirava", sans-serif;
+  font-size: 1.125rem;
+  letter-spacing: 0.03em;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  overflow-wrap: anywhere;
+  white-space: pre-line;             /* lets the \n in the LinkedIn label break the line */
+}
+
+.social-link:hover {
+  color: #273A5E;
+}
+
+/* ---------- Resume button ---------- */
+.resume-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 2rem;
+  background-color: #273A5E;
+  color: #fff;
+  border: none;                      /* needed now that it is a <button> */
+  border-radius: 999px;
+  cursor: pointer;                   /* needed now that it is a <button> */
+  text-decoration: none;
+  font-family: "Mirava", sans-serif;
+  font-size: 1.375rem;
+  letter-spacing: 0.03em;
+  transition: background-color 0.2s ease;
+}
+
+.resume-button:hover,
+.resume-button:focus-visible {
+  background-color: #0F1E3A;
+}
+
+.resume-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 75rem) {
+  .contact {
+    gap: 1rem;
+    padding: 3rem 2rem 0 0;
+  }
+
+  .contact-title {
+    padding-left: 2rem;
+    font-size: 3rem;
+  }
+
+  .social-icon {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .social-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 56.25rem) {
+  .contact {
+    grid-template-columns: 1fr;
+    max-width: 38rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .contact-title {
+    padding-left: 0;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-image {
+    margin: 0 auto;
+  }
+
+  .contact-top,
+  .social-list {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .contact {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .direct-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+
+  .contact-direct {
+    font-size: 1.125rem;
+  }
+
+  .social-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .social-item {
+    gap: 1rem;
+  }
+
+  .social-name {
+    font-size: 1.25rem;
+  }
+
+  .social-link {
+    font-size: 0.875rem;
+  }
+
+  .resume-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.25rem;
+  }
+}
