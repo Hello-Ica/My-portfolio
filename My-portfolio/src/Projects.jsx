@@ -5,7 +5,7 @@ import kaidevs from "./assets/projects/kaidevs.svg";
 import whyteCafe from "./assets/projects/whyte-cafe.svg";
 
 const projects = [
-  { name: "Mindlobby", image: mindlobby, url: "https://your-mindlobby-link.com" },
+  { name: "Mindlobby", image: mindlobby, url: "https://mindlobby-production.up.railway.app/" },
   { name: "Kaidevs", image: kaidevs, url: "https://kaidevs.vercel.app" },
   { name: "Whyte Cafe", image: whyteCafe, url: "https://whyte-cafe-tan.vercel.app", featured: true },
 ];
