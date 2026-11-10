@@ -27,7 +27,7 @@ const socials = [
     url: "https://www.facebook.com/jenica.herrera.3",
   },
 ];
-const RESUME_URL = "/resume.pdf";
+const RESUME_URL = "/Maria_Jenica_Herrera_Resume.pdf";
 const RESUME_NAME = "Maria-Jenica-Herrera-Resume.pdf";
 
 function fallbackDownload() {
@@ -89,10 +89,15 @@ function Contact() {
             <span>09288508351</span>
           </a>
 
-          <a className="contact-direct" href="mailto:herreramariajenica@gmail.com">
-            <img className="direct-icon" src={emailIcon} alt="" />
-            <span className="underlined">herreramariajenica@gmail.com</span>
-          </a>
+        <a
+          className="contact-direct"
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=herreramariajenica@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+        <img className="direct-icon" src={emailIcon} alt="" />
+        <span className="underlined">herreramariajenica@gmail.com</span>
+        </a>
         </div>
 
         <ul className="social-list">
@@ -123,10 +128,10 @@ function Contact() {
           ))}
         </ul>
 
-        <a className="resume-button" href="/resume.pdf" download>
-          <img className="resume-icon" src={downloadIcon} alt="" />
-          <span>Download Maria Jenica's Resume</span>
-        </a>
+      <button type="button" className="resume-button" onClick={handleDownload}>
+      <img className="resume-icon" src={downloadIcon} alt="" />
+      <span>Download Maria Jenica's Resume</span>
+      </button>
       </div>
     </section>
   );
