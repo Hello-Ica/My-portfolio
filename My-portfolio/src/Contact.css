@@ -3,14 +3,14 @@
   grid-template-columns: 0.8fr 1fr;
   gap: 1.5rem;
   align-items: start;
-  padding: 3rem 4rem 0 0;            /* no left/bottom padding so the illustration touches the edges */
+  padding: 3rem 4rem 0 0;            
   background-color: #fff;
 }
 
-/* ---------- Left column ---------- */
+
 .contact-title {
   margin-bottom: 1.5rem;
-  padding-left: 3.5rem;              /* only the title is indented */
+  padding-left: 3.5rem;             
   color: #0F1E3A;
   font-family: "Gishella Morely", sans-serif;
   font-size: 3.5rem;
@@ -25,7 +25,7 @@
   height: auto;
 }
 
-/* ---------- Right column ---------- */
+
 .contact-right {
   min-width: 0;
 }
@@ -52,7 +52,7 @@
 }
 
 .contact-direct .underlined {
-  font-size: 1.2rem;                 /* the email is smaller than the phone number */
+  font-size: 1.2rem;                 
 }
 
 .direct-icon {
@@ -66,7 +66,7 @@
   text-underline-offset: 0.25rem;
 }
 
-/* ---------- Social list ---------- */
+
 .social-list {
   list-style: none;
   display: flex;
@@ -121,14 +121,13 @@
   text-decoration: underline;
   text-underline-offset: 0.25rem;
   overflow-wrap: anywhere;
-  white-space: pre-line;             /* lets the \n in the LinkedIn label break the line */
+  white-space: pre-line;             
 }
 
 .social-link:hover {
   color: #273A5E;
 }
 
-/* ---------- Resume button ---------- */
 .resume-button {
   display: inline-flex;
   align-items: center;
@@ -136,9 +135,9 @@
   padding: 1.1rem 2rem;
   background-color: #fff ;
   color: #273A5E;
-  border: solid #273A5E 0.25rem;                   /* needed now that it is a <button> */
+  border: solid #273A5E 0.25rem;                   
   border-radius: 999px;
-  cursor: pointer;                   /* needed now that it is a <button> */
+  cursor: pointer;                 
   text-decoration: none;
   font-family: "Mirava", sans-serif;
   font-size: 1.375rem;
@@ -163,7 +162,7 @@
   transition: filter 0.2s ease;
 }
 
-/* ---------- Responsive ---------- */
+/*Responsiveness with different devices*/
 @media (max-width: 75rem) {
   .contact {
     gap: 1rem;
@@ -251,10 +250,10 @@
 }
 .contact-right {
   min-width: 0;
-  padding-bottom: 3rem;              /* added: space under the resume button */
+  padding-bottom: 3rem;              
 }
 
 .contact-left {
-  display: flex;                     /* added */
-  flex-direction: column;            /* added */
+  display: flex;                     
+  flex-direction: column;            
 }

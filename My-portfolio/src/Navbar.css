@@ -1,5 +1,5 @@
 nav {
-  position: relative;               /* added: anchors the mobile dropdown */
+  position: relative;               
   height: 6.875rem;
   display: flex;
   align-items: center;
@@ -18,14 +18,14 @@ nav ul {
 nav a {
   color: #fff;
   text-decoration: none;
-  font-size: 1.875rem;              /* 30px in rem */
+  font-size: 1.875rem;              
 }
 
 nav a:hover {
   color: #4da3ff;
 }
 
-/* added: hamburger button is hidden on desktop */
+/* hamburger button on smaller devces*/
 .menu-toggle {
   display: none;
   background: none;
@@ -44,7 +44,7 @@ nav a:hover {
   border-radius: 2px;
 }
 
-/* added: laptops and small desktops, tighter spacing */
+
 @media (max-width: 75rem) {
   nav ul {
     gap: 3rem;
@@ -55,7 +55,7 @@ nav a:hover {
   }
 }
 
-/* added: tablet and mobile, hamburger menu */
+
 @media (max-width: 56.25rem) {
   nav {
     height: 5rem;

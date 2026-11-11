@@ -13,7 +13,7 @@
   max-width: 35rem;
   height: auto;
   flex-shrink: 1;
-  align-self: center;     /* added */
+  align-self: center;    
 }
 
 .about-text {
@@ -66,7 +66,7 @@
   }
 }
 
-/* tablet and mobile: stack into one column */
+/* tablet and mobile - stack into one column */
 @media (max-width: 56.25rem) {
   .about {
     flex-direction: column;
@@ -98,7 +98,7 @@
   }
 }
 
-/* small phones */
+/* small phones responsiveness */
 @media (max-width: 30rem) {
   .about {
     padding: 1.5rem 1rem 2rem;
